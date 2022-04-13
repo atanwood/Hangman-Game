@@ -1,3 +1,4 @@
+*Subject to change
 1. Find a good tutorial for guidance. 
 2. import the "random" module.
 3. Get user name input as string to address them by name later in the game.
