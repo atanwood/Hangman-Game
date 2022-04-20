@@ -46,6 +46,9 @@ def run_game():
     print("")
     print("There are", len(game_word),"in the word")
 
+#While loop is created to allow the user to continue guessing
+
+#For when the user attempts to guess a single letter
     while guessed == False and user_tries > 0:
         print("You have ", str(user_tries), " tries remaining.")
         guess = input("Guess a letter in the word, or if you feel confident, guess the whole word: ").lower()
@@ -63,4 +66,18 @@ def run_game():
                 user_guesses.append(guess)
             else:
                 print("Invalid input. Try again.")
-            
+
+      #For when the user attempts to guess the whole word
+
+        elif len(guess) == len(game_word):
+            if guess == game_word:
+                print("Wow! You're Good! You correctly guessed the entire word.")
+                guessed=True
+            else:
+                print("Sorry, that's not the right word.")
+                user_tries-=1
+
+        #For when the user enters the wrong amount of letters for the word. For example, if they enter 5 letters for a 4 letter word.
+        else:
+            print("The length of your guess should either be 1 letter or the length of the word")
+            user_tries-=1
