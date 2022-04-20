@@ -42,6 +42,25 @@ def run_game():
     game_word= random_word()
     user_guesses=[]
     user_tries = 7
-    guess = False
+    guessed = False
     print("")
     print("There are", len(game_word),"in the word")
+
+    while guessed == False and user_tries > 0:
+        print("You have ", str(user_tries), " tries remaining.")
+        guess = input("Guess a letter in the word, or if you feel confident, guess the whole word: ").lower()
+        if len(guess)== 1:
+            if guess not in alphabet:
+                print("That is an invalid input. Please enter letters only.")
+            elif guess in user_guesses:
+                print("You have already tried that letter.")
+            elif guess not in game_word:
+                print("Sorry, that letter is not in the word.")
+                user_guesses.append(guess)
+                user_tries-=1
+            elif guess in game_word:
+                print("Excellent! You correctly guessed a letter")
+                user_guesses.append(guess)
+            else:
+                print("Invalid input. Try again.")
+            
