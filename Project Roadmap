@@ -1,9 +1,7 @@
 *Subject to change
 1. Find a good tutorial for guidance. (DONE)
-2. import the "random" module.
-3. import tkinter
-4. create image files for the letters in the GUI
-5. Get user name input as string to address them by name later in the game.
+2. import the "random" module. (DONE)
+5. Get user name input as string to address them by name later in the game.(DONE)
 6. define function for asking the player if they would like to play
 7. define function to run the game.
 8. define function that generates a random word for the user to guess.
