@@ -34,4 +34,14 @@ def random_word():
     words = ["boat","dog","house","store","snake","apple","peanut"]
     return random.choice(words).lower()
 
+#define function to run the game
 
+def run_game():
+    welcome()
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    game_word= random_word()
+    user_guesses=[]
+    user_tries = 7
+    guess = False
+    print("")
+    print("There are", len(game_word),"in the word")
