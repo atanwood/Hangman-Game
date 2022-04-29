@@ -1,10 +1,9 @@
 *Subject to change
 1. Find a good tutorial for guidance. (DONE)
-2. import the "random" module.
-3. Get user name input as string to address them by name later in the game.
-4. define function for asking the player if they would like to play
-5. define function to run the game.
-6. define function that generates a random word for the user to guess.
-7. run the game function
-8. run functon asking user if they want to play again.
-9. implement a gui which would have a better UI than simply letters and symbols.
+2. import the "random" module. (DONE)
+5. Get user name input as string to address them by name later in the game.(DONE)
+6. define function for asking the player if they would like to play (DONE)
+7. define function to run the game. (DONE)
+8. define function that generates a random word for the user to guess. (DONE)
+9. run the game function
+10. run functon asking user if they want to play again.
