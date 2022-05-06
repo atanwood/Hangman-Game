@@ -44,7 +44,7 @@ def run_game():
     user_tries = 7
     guessed = False
     print("")
-    print("There are", len(game_word),"letters in the word and it is a noun")
+    print("There are", len(game_word),"letters in the word and it is a noun.")
 
 #While loop is created to allow the user to continue guessing
 
@@ -62,7 +62,7 @@ def run_game():
                 user_guesses.append(guess)
                 user_tries-=1
             elif guess in game_word:
-                print("Excellent! You correctly guessed a letter")
+                print("Excellent! You correctly guessed a letter!")
                 user_guesses.append(guess)
             else:
                 print("Invalid input. Try again.")
