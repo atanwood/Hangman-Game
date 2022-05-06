@@ -31,7 +31,7 @@ def play_again():
 #Define function for generating the random word that will be guessed by the user
 
 def random_word():
-    words = ["boat","dog","house","store","snake","apple","peanut"]
+    words = ["boat","dog","house","store","snake","apple","peanut","dinner","woman","idea","product","chest","bread","wedding","oven","bath","road","wife","man","injury","bonus","phone","boyfriend","friend","boy","girl","menu","stranger","world","death","king","queen","army","actor","river","song","basket","cat","tooth","pizza","uncle","aunt","studio","client"]
     return random.choice(words).lower()
 
 #define function to run the game
@@ -44,13 +44,13 @@ def run_game():
     user_tries = 7
     guessed = False
     print("")
-    print("There are", len(game_word),"in the word")
+    print("There are", len(game_word),"letters in the word and it is a noun")
 
 #While loop is created to allow the user to continue guessing
 
 #For when the user attempts to guess a single letter
     while guessed == False and user_tries > 0:
-        print("You have ", str(user_tries), " tries remaining.")
+        print("You have", str(user_tries), "tries remaining.")
         guess = input("Guess a letter in the word, or if you feel confident, guess the whole word: ").lower()
         if len(guess)== 1:
             if guess not in alphabet:
@@ -75,9 +75,31 @@ def run_game():
                 guessed=True
             else:
                 print("Sorry, that's not the right word.")
+
                 user_tries-=1
 
         #For when the user enters the wrong amount of letters for the word. For example, if they enter 5 letters for a 4 letter word.
         else:
             print("The length of your guess should either be 1 letter or the length of the word")
             user_tries-=1
+
+        status= ""
+        if guessed == False:
+            for letter in game_word:
+                if letter in user_guesses:
+                    status += letter
+                else:
+                    status += '_'
+            print(status)
+
+        if status == game_word:
+            print("Awesome job! You correctly guessed the word!")
+            guessed == True
+            break
+        elif user_tries == 0:
+            print("You've exhausted all of your tries without guessing the word! :( The correct word was", game_word.capitalize())
+            break
+
+    play_again()
+run_game()
+
