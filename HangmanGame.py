@@ -99,8 +99,73 @@ def run_game():
             guessed == True
             break
         elif user_tries == 0:
+            print('''  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''')
             print("You've exhausted all of your tries without guessing the word! :( The correct word was", game_word.capitalize())
             break
+
+        elif user_tries==6:
+            print('''+---+
+|   |
+    |
+    |
+    |
+    |
+=========''')
+        elif user_tries==5:
+            print( '''+---+
+|   |
+O   |
+    |
+    |
+    |
+=========''')
+        elif user_tries==4:
+            print('''+---+
+|   |
+O   |
+|   |
+    |
+    |
+=========''')
+        elif user_tries==3:
+            print(''' +---+
+ |   |
+ O   |
+/|   |
+     |
+     |
+=========''')
+        elif user_tries==2:
+            print('''+---+
+ |   |
+ O   |
+/|\  |
+     |
+     |
+=========''')
+
+        elif user_tries==1:
+            print('''+---+
+ |   |
+ O   |
+/|\  |
+/    |
+     |
+=========''')
+        elif user_tries==0:
+            print('''  +---+
+ |   |
+ O   |
+/|\  |
+/ \  |
+     |
+=========''')
 
     play_again()
 run_game()
