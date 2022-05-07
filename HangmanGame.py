@@ -98,6 +98,8 @@ def run_game():
             print("Awesome job! You correctly guessed the word!")
             guessed == True
             break
+#ASCII art to show the hangman game. Art from https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c
+
         elif user_tries == 0:
             print('''  +---+
   |   |
