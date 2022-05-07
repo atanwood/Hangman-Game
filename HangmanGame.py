@@ -38,7 +38,7 @@ def random_word():
 
 def run_game():
     welcome()
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    alphabet = "abcdefghijklmnopqrstuvwxyz7"
     game_word= random_word()
     user_guesses=[]
     user_tries = 7
@@ -51,9 +51,11 @@ def run_game():
 #For when the user attempts to guess a single letter
     while guessed == False and user_tries > 0:
         print("You have", str(user_tries), "tries remaining.")
-        guess = input("Guess a letter in the word, or if you feel confident, guess the whole word: ").lower()
+        guess = input("Guess a letter in the word, or if you feel confident, guess the whole word.\nTo view letters that you already guessed, enter \"7\":").lower()
         if len(guess)== 1:
-            if guess not in alphabet:
+            if guess == "7":
+                print(user_guesses)
+            elif guess not in alphabet:
                 print("That is an invalid input. Please enter letters only.")
             elif guess in user_guesses:
                 print("You have already tried that letter.")
